@@ -41,6 +41,5 @@ module Smspilot
       self.logger     = DEFAILT_LOGGER
       self
     end
-
   end
 end

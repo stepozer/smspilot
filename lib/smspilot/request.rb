@@ -5,7 +5,6 @@ require 'smspilot/errors'
 
 module Smspilot
   module Request
-
     def send_request(body)
       json_body = request_json body
       begin

@@ -33,7 +33,6 @@ module Smspilot
     }
 
     class ApiError < StandardError
-
       def self.raise_by_code(code=nil)
         if API_ERROR_CODES[code].nil?
           raise UnknownApiError
@@ -50,7 +49,6 @@ module Smspilot
         end
       end
     end
-
 
     class InputDataRequiredError < ApiError; end # 10
     class UnknownInputFormatError < ApiError; end # 11
@@ -82,11 +80,10 @@ module Smspilot
     class UserNotFoundError < ApiError; end # 400
     class UnknownApiError < ApiError; end # unknown codes
 
-
     class TimeoutError < StandardError; end;
     class InvalidJsonResponseError < StandardError; end;
     class InvalidResposeStatusError < StandardError; end;
-
-
+    class WrongStatusError < StandardError; end;
+    class ParsingError < StandardError; end;
   end
 end
